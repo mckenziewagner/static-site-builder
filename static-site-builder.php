@@ -65,7 +65,7 @@ function curl($url) {
 }
 
 function post_to_build_hook() {
-  $siteUrl = get_site_url() . '/wp-admin/admin.php?page=build';
+  $siteUrl = get_site_url() . '/wp-admin/admin.php?page=static-builder';
   $result = curl('https://api.netlify.com/build_hooks/' . $_POST['netlify-id']);
 
   update_option('netlify_build_id', $_POST['netlify-id']);
